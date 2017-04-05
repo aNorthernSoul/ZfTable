@@ -1,5 +1,5 @@
 {
-    "name": "dudapiotr/zftable",
+    "name": "anorthernsoul/zftable",
     "description": "Flexible tool to generate table",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -10,6 +10,10 @@
         {
             "name": "Piotr Duda",
             "email": "dudapiotrek@gmail.com"
+        },
+        {
+            "name": "Dustin Lawrence",
+            "email": "dustinwl@gmail.com"
         }
     ],
     "require": {

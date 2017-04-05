@@ -127,7 +127,7 @@ class Row extends AbstractElement
         if ( !sizeof($data) ) {
             return sprintf('<tr %s><td colspan="%s">%s</td></tr>', $this->getAttributes(), sizeof($this->getTable()->getHeaders()), 'There is no data to display.');
         }
-        
+
         foreach ($data as $rowData) {
             $this->setActualRow($rowData);
             $rowRender = '';
