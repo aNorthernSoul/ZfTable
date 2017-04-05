@@ -100,11 +100,17 @@ class AdapterArrayObject extends AbstractAdapter implements AdapterInterface, \Z
 
     public function getPureValueOfFilter($key)
     {
+        if ( !isset($this->object[$key]) ) {
+            return null;
+        }
         return $this->object[$key];
     }
 
     public function getValueOfFilter($key, $prefix = 'zff_')
     {
+        if ( !isset($this->filters[$prefix . $key]) ) {
+            return null;
+        }
         return $this->filters[$prefix . $key];
     }
 
