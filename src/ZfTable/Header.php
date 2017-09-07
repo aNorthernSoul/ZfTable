@@ -43,6 +43,30 @@ class Header extends AbstractElement
      */
     protected $tableAlias;
 
+
+    /**
+     * An array of columns to sort by including the table alias
+     *
+     * @var array
+     */
+    protected $sortColumns;
+
+    /**
+     * An optional array of columns to sort by including the
+     * table alias when the sort order is ASC
+     *
+     * @var array
+     */
+    protected $sortColumnsAsc;
+
+    /**
+     * An optional array of columns to sort by including the
+     * table alias when the sort order is DESC
+     *
+     * @var array
+     */
+    protected $sortColumnsDesc;
+
     /**
      * Cell object
      * @var Cell
@@ -130,6 +154,9 @@ class Header extends AbstractElement
         $this->sortable = (isset($options['sortable'])) ? $options['sortable'] : true;
         $this->separatable = (isset($options['separatable'])) ? $options['separatable'] : $this->getSeparatable();
         $this->tableAlias = (isset($options['tableAlias'])) ? $options['tableAlias'] : '';
+        $this->sortColumns = (isset($options['sortColumns'])) ? $options['sortColumns'] : null;
+        $this->sortColumnsAsc = (isset($options['sortColumnsAsc'])) ? $options['sortColumnsAsc'] : null;
+        $this->sortColumnsDesc = (isset($options['sortColumnsDesc'])) ? $options['sortColumnsDesc'] : null;
 
         if (isset($options['editable']) && $options['editable'] == true) {
             $this->editable = $options['editable'];
@@ -301,6 +328,36 @@ class Header extends AbstractElement
     public function getTableAlias()
     {
         return $this->tableAlias;
+    }
+
+    /**
+     * Get the sort columns if any are set
+     *
+     * @return string
+     */
+    public function getSortColumns()
+    {
+        return $this->sortColumns;
+    }
+
+    /**
+     * Get the ascending sort columns if any are set
+     *
+     * @return string
+     */
+    public function getSortColumnsAsc()
+    {
+        return $this->sortColumnsAsc;
+    }
+
+    /**
+     * Get the descending sort columns if any are set
+     *
+     * @return string
+     */
+    public function getSortColumnsDesc()
+    {
+        return $this->sortColumnsDesc;
     }
 
     /**

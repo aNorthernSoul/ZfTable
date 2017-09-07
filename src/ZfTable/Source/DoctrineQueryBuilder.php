@@ -41,7 +41,9 @@ class DoctrineQueryBuilder extends AbstractSource
 
             $this->order();
 
-             $adapter = new DoctrineAdapter(new ORMPaginator($this->query));
+             $ormPaginator = new ORMPaginator($this->query);
+             $ormPaginator->setUseOutputWalkers(false);
+             $adapter = new DoctrineAdapter($ormPaginator);
              $this->paginator = new Paginator($adapter);
              $this->initPaginator();
 
@@ -62,12 +64,52 @@ class DoctrineQueryBuilder extends AbstractSource
 
         $header = $this->getTable()->getHeader($column);
         $tableAlias = ($header) ? $header->getTableAlias() : 'q';
+        $sortColumns = ($header) ? $header->getSortColumns() : null;
+        $sortColumnsAsc = ($header) ? $header->getSortColumnsAsc() : null;
+        $sortColumnsDesc = ($header) ? $header->getSortColumnsDesc() : null;
 
-        if (false === strpos($tableAlias, '.')) {
-            $tableAlias = $tableAlias.'.'.$column;
+        if( $order == 'ASC' && is_array($sortColumnsAsc) && sizeof($sortColumnsAsc) ) {
+            $first = false;
+            foreach ( $sortColumnsAsc as $t ) {
+                if ( !$first ) {
+                    $this->query->orderBy($t, $order);
+                    $first = true;
+                }else {
+                    $this->query->addOrderBy($t, $order);
+                }
+            }
+        }elseif( $order == 'DESC' && is_array($sortColumnsDesc) && sizeof($sortColumnsDesc) ) {
+            $first = false;
+            foreach ( $sortColumnsDesc as $t ) {
+                if ( !$first ) {
+                    $this->query->orderBy($t, $order);
+                    $first = true;
+                }else {
+                    $this->query->addOrderBy($t, $order);
+                }
+            }
+        }elseif( is_array($sortColumns) && sizeof($sortColumns) ) {
+            if ( $order == 'DESC' ) {
+                $columns = array_reverse($sortColumns);
+            }else{
+                $columns = $sortColumns;
+            }
+            $first = false;
+            foreach ( $columns as $t ) {
+                if ( !$first ) {
+                    $this->query->orderBy($t, $order);
+                    $first = true;
+                }else {
+                    $this->query->addOrderBy($t, $order);
+                }
+            }
+        }else{
+            if (false === strpos($tableAlias, '.')) {
+                $tableAlias = $tableAlias . '.' . $column;
+            }
+
+            $this->query->orderBy($tableAlias, $order);
         }
-
-        $this->query->orderBy($tableAlias, $order);
     }
 
 
