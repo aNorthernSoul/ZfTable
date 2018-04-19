@@ -17,6 +17,7 @@ class Advance extends AbstractTable
     protected $config = array(
         'name' => 'Advance',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

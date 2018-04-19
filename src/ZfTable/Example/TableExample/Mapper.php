@@ -17,6 +17,7 @@ class Mapper extends AbstractTable
     protected $config = array(
         'name' => 'Mapper decorator',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

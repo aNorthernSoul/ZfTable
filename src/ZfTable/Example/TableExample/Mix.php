@@ -17,6 +17,7 @@ class Mix extends AbstractTable
     protected $config = array(
         'name' => 'Mix',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

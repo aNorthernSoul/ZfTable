@@ -16,6 +16,7 @@ class InstitutionRequests extends AbstractTable
     protected $config = array(
         'name' => 'Institution Requests',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

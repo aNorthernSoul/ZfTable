@@ -16,6 +16,7 @@ class Condition extends AbstractTable
     protected $config = array(
         'name' => 'Condition',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

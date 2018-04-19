@@ -16,6 +16,7 @@ class ColumnFiltering extends AbstractTable
     protected $config = array(
         'name' => 'Filtering by column',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

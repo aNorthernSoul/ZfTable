@@ -16,6 +16,7 @@ class NewPluginCondition extends AbstractTable
     protected $config = array(
         'name' => 'New condition plugin (Between, GreaterThan, LesserThan )',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

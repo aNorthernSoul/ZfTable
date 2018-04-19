@@ -16,6 +16,7 @@ class ArrayAdapter extends AbstractTable
     protected $config = array(
         'name' => 'Array Adapter',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'showColumnFilters' => true,

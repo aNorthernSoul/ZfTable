@@ -17,6 +17,7 @@ class ImportListTable extends AbstractTable
     protected $config = array(
         'name' => 'Lista importów',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => true,
         'showItemPerPage' => true,
         'itemCountPerPage' => 20,

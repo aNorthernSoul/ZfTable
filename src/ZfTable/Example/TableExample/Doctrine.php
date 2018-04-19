@@ -16,6 +16,7 @@ class Doctrine extends AbstractTable
     protected $config = array(
         'name' => 'Doctrine 2',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'showColumnFilters' => true,

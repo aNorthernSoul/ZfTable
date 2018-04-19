@@ -31,6 +31,12 @@ class ModuleOptions extends AbstractOptions implements
     protected $showPagination = true;
 
     /**
+     * Show or hide item count summary view
+     * @var boolean
+     */
+    protected $showSummary = true;
+
+    /**
      * Show or hide quick search view
      * @var boolean
      */
@@ -199,6 +205,11 @@ class ModuleOptions extends AbstractOptions implements
         return $this->showPagination;
     }
 
+    public function getShowSummary()
+    {
+        return $this->showSummary;
+    }
+
     public function getShowQuickSearch()
     {
         return $this->showQuickSearch;
@@ -232,6 +243,11 @@ class ModuleOptions extends AbstractOptions implements
     public function setShowPagination($showPagination)
     {
         $this->showPagination = $showPagination;
+    }
+
+    public function setShowSummary($showSummary)
+    {
+        $this->showSummary = $showSummary;
     }
 
     public function setShowQuickSearch($showQuickSearch)

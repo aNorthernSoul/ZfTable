@@ -16,6 +16,7 @@ class AdditionalParams extends AbstractTable
     protected $config = array(
         'name' => 'Additional Params',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

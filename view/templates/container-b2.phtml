@@ -18,7 +18,7 @@
     </div>
     <?php echo $this->table; ?>
     <div class="row-fluid">
-        <div class="span6">
+        <div class="span3">
             <?php if ($this->showItemPerPage): ?>
                 <div class="dataTables_length">
                     <label class="pull-right">
@@ -36,11 +36,14 @@
                 <a href="#" style="margin-left: 10px;" class="export-csv">Export to CSV</a>
            <?php endif;?>
         </div>
-        <div class="span6">
+        <div class="span9">
             <?php if ($this->showPagination): ?>
                 <div class="dataTables_paginate paging_bootstrap pagination">
                     <?php echo $this->paginator; ?>
                 </div>
+                <?php if ($this->showSummary) : ?>
+                <p class="zftable-summary pull-right">Showing <?= $this->currentItemCount ?> of <?= $this->totalItemCount ?> records.</p>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
         <div class="processing">

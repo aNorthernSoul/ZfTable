@@ -16,6 +16,7 @@ class CallableTable extends AbstractTable
     protected $config = array(
         'name' => 'Callable',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

@@ -17,6 +17,7 @@ class JavascriptEvents extends AbstractTable
     protected $config = array(
         'name' => 'Table',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

@@ -17,6 +17,7 @@ class Separatable extends AbstractTable
     protected $config = array(
         'name' => 'Separatable decorator',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );

@@ -16,6 +16,7 @@ class CsvExport extends AbstractTable
     protected $config = array(
         'name' => 'CSV Export',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

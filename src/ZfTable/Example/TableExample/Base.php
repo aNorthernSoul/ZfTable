@@ -16,6 +16,7 @@ class Base extends AbstractTable
     protected $config = array(
         'name' => 'Base table',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
         'itemCountPerPage' => 10,

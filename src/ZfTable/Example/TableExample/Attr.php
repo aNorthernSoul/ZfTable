@@ -16,6 +16,7 @@ class Attr extends AbstractTable
     protected $config = array(
         'name' => 'Configure attributes',
         'showPagination' => true,
+        'showSummary' => true,
         'showQuickSearch' => false,
         'showItemPerPage' => true,
     );
