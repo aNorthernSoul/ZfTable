@@ -16,6 +16,13 @@ div.dataTables_info {
 
 div.dataTables_paginate {
 	float: right;
+	clear:right;
+	margin: 0;
+}
+
+div.dataTables_paginator_summary {
+	clear:left;
+	float: right;
 	margin: 0;
 }
 
