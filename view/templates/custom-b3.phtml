@@ -62,7 +62,7 @@
                 </div>
                 <?php if ($this->showSummary) : ?>
                 <div class="dataTables_paginator_summary">
-                    <p class="zftable-summary">Showing <?= $this->paginator->getTotalItemCount() ?> of <?= $this->paginator->getCurrentItemCount() ?> records.</p>
+                    <p class="zftable-summary">Showing <?= $this->currentItemCount ?> of <?= $this->totalItemCount ?> records.</p>
                 </div>
                 <?php endif; ?>
             <?php endif; ?>
