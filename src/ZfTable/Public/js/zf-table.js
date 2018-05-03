@@ -112,7 +112,7 @@
             var check = options.sendAdditionalParams();
             $obj.prepend('<div class="processing" style=""></div>');
             if ( $obj.find(':input').length ) {
-                var post_data = $obj.find(':input').serialize() + '&' + options.sendAdditionalParams();
+                var post_data = $obj.find('.params-wrap input').serialize() + '&' + $obj.find('.params-wrap dataTables_filter input').serialize() + '&' + $obj.find('.filter:input').serialize() + '&' + options.sendAdditionalParams();
             }else{
                 var post_data = options.sendAdditionalParams();
             }
