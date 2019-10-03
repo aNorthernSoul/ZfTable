@@ -26,7 +26,13 @@ td.editable , .table-hover>tbody>tr:hover>td.editable , .table-striped>tbody>tr:
     margin: 0px;
 }
 
+.zf-table-wrap .zf-table-div.table-responsive {
+    margin-bottom: 20px;
+}
 
+.zf-table-wrap .zf-table-div.table-responsive table.table-responsive {
+    margin-bottom: 0;
+}
 
 table.table thead .sorting,
 table.table thead .sorting_asc,
