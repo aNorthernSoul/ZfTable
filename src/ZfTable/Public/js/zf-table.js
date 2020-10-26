@@ -151,18 +151,30 @@
             $obj.find('input[name="zff_date"]').datetimepicker({
                 format: 'MM/DD/YYYY',
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_date"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 
             $obj.find('input[name="zff_exchange_expires_hours"]').datetimepicker({
                 format: 'MM/DD/YYYY',
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_exchange_expires_hours"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 
             $obj.find('input[name="zff_start_date"]').datetimepicker({
                 format: 'MM/DD/YYYY',
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_start_date"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 
@@ -177,11 +189,19 @@
                 format: 'MM/DD/YYYY LT',
                 stepping: 1,
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             */
             $obj.find('input[name="zff_created"]').datetimepicker({
                 format: 'MM/DD/YYYY',
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_created"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
 
@@ -199,7 +219,11 @@
                     $obj.find('input[name="end_date"]').data("DateTimePicker").minDate(false);
                     $obj.find('input[name="end_date"]').data("DateTimePicker").defaultDate(false);
                 }
-            })
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
+            });
             $obj.find('input[name="start_date"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
             $obj.find('input[name="end_date"]').datetimepicker({
                 format: 'MM/DD/YYYY',
@@ -215,22 +239,38 @@
                     $obj.find('input[name="start_date"]').data("DateTimePicker").maxDate(false);
                     $obj.find('input[name="start_date"]').data("DateTimePicker").defaultDate(false);
                 }
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="end_date"]').mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
             $obj.find('input[name="zff_time"]').datetimepicker({
                 format: 'LT',
                 stepping: 5,
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_start_time"]').datetimepicker({
                 format: 'LT',
                 stepping: 5,
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_end_time"]').datetimepicker({
                 format: 'LT',
                 stepping: 5,
                 showClear: true
+            }).on('dp.hide', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y: hidden !important; overflow-x: auto !important;');
+            }).on('dp.show', function(){
+                $(this).closest('.table-responsive').attr('style', 'overflow-y:visible !important; overflow-x:visible !important;');
             });
             $obj.find('input[name="zff_phone"]').mask("(999) 999-9999? x99999");
 
