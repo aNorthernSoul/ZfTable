@@ -80,7 +80,7 @@ abstract class AbstractTable extends AbstractElement implements TableInterface
      * Default classes for table
      * @var array
      */
-    protected $class = array('table', 'table-responsive', 'table-bordered', 'table-condensed', 'table-hover', 'table-striped', 'dataTable');
+    protected $class = array('table', 'table-bordered', 'table-condensed', 'table-hover', 'table-striped', 'dataTable');
 
     /**
      * Array configuration of table
